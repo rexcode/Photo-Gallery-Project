@@ -1,0 +1,276 @@
+
+/**{   border : 1px solid black; }*/
+html { 
+  height: 100%; 
+  width: 100%; 
+}
+
+@font-face {
+    font-family: 'latobold';
+    src: url('../fonts/lato-bold-webfont.eot');
+    src: url('../fonts/lato-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-bold-webfont.woff2') format('woff2'),
+         url('../fonts/lato-bold-webfont.woff') format('woff'),
+         url('../fonts/lato-bold-webfont.ttf') format('truetype'),
+         url('../fonts/lato-bold-webfont.svg#latobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/lato-regular-webfont.eot');
+    src: url('../fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('../fonts/lato-regular-webfont.woff') format('woff'),
+         url('../fonts/lato-regular-webfont.ttf') format('truetype'),
+         url('../fonts/lato-regular-webfont.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { 
+  background: #E4F6F8;
+  /*background: url('../cloud.png');*/
+  /*background-repeat: no-repeat;*/
+  
+background: rgba(199,243,124,1);
+background: -moz-linear-gradient(left, rgba(199,243,124,1) 0%, rgba(246,254,93,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(199,243,124,1)), color-stop(100%, rgba(246,254,93,1)));
+background: -webkit-linear-gradient(left, rgba(199,243,124,1) 0%, rgba(246,254,93,1) 100%);
+background: -o-linear-gradient(left, rgba(199,243,124,1) 0%, rgba(246,254,93,1) 100%);
+background: -ms-linear-gradient(left, rgba(199,243,124,1) 0%, rgba(246,254,93,1) 100%);
+background: linear-gradient(to right, rgba(199,243,124,1) 0%, rgba(246,254,93,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7f37c', endColorstr='#f6fe5d', GradientType=1 );
+
+  height: 100%; 
+  width: 100%;
+  margin: 0; padding: 0;
+  border: 0;
+  font: 13px/15px Lato, Verdana,Arial,Helvetica,sans-serif; 
+}
+
+img { border: none; }
+
+table, tr, td, th { 
+    border-collapse: collapse; 
+    vertical-align: center; 
+    text-align: center;
+    font: 13px/15px Verdana,Arial,Helvetica,sans-serif; 
+}
+th{
+  font-weight: bold;
+}
+
+a { color: #8D0D19;}
+
+#header { 
+  height: 70px; 
+  text-align: left; 
+  background: #1A400C; 
+  color: #D4E6F4; 
+}
+
+#header h1 { 
+  padding: 1em; 
+  margin:0;
+}
+
+/* Note: IE 5 & 6 won't understand min-height */
+#main { 
+  min-height: 620px; 
+  width: 100%; 
+ /* background: #E4F6F8; */
+  padding: 2em;
+}
+
+#footer {
+  min-height: 40px; 
+  height: 2em; 
+  padding: 1em; 
+  text-align: center; 
+  background: #1A400C; 
+  background: #080A76;
+  background: #222;
+  opacity: 0.6;
+  color: #D7ECFA; 
+}
+
+table.bordered tr th, table.bordered tr td { 
+  border: 1px solid #000000; 
+}
+
+#pagination .selected { font-weight: bold; color: #8D0D19;}
+
+.clearfix:after {
+   visibility: hidden;
+   display: block;
+   font-size: 0;
+   content: " ";
+   clear: both;
+   height: 0;
+ }
+
+ h2{
+  text-align: center;
+  margin-bottom: 20px;
+ }    
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+#footer a { 
+  color: #eee; 
+  text-decoration: underline;
+}
+
+nav ul {
+  margin-top: 50px;
+}
+.grid{
+  margin-top: 80px;
+  float: left; 
+  margin-left:30px;
+}
+
+.grid p{
+  text-align: center;
+  font-family: Lato;
+  font-size: 18px;
+}
+.grid img{
+  width: 200px;
+  height: 150px;
+  /*width = "200"; height="150"*/
+}
+.form{
+  margin: auto;
+  margin-left: 200px;
+  margin-top: 60px;
+}
+/*.border{
+  border: 1px solid block;
+}*/
+.center{
+  text-align: center;
+  margin: 0 auto;
+}
+.left{
+  float: left;
+}
+.left td{
+  text-align: left;
+  margin: 10px;
+}
+.margin{
+  margin-top: 80px;
+}
+.form p {
+  text-align: left;
+  font-size: 18px;
+}
+.login{
+  margin: 0 auto;
+}
+.upload{
+  margin-right: 50px;
+}
+.table {
+  font-size:12px;
+  color:#333333;
+  width:1000px;
+  border-width: 1px;
+  border-color: #729ea5;
+  border-collapse: collapse;
+}
+.table th {
+  font-size:16px;
+  text-align: center;
+  background-color:#5D8DF9;
+  /*background: rgba(37,13,91,0.8); #acc8cc */
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #729ea5;
+  color: #eee;
+}
+.table tr {
+  /*background-color:#d4e3e5;*/
+  background: #eee;
+}
+.table td {
+  font-size:16px;
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #729ea5;
+}
+.table tr:hover {
+  background-color:#ddd;
+}
+.container{
+  max-width: 1000px;
+}
+
+td .img{
+  border-radius: 10px;
+}
+
+.navbar-inverse{
+  background: #211;
+  /*opacity: 0.8;*/
+
+background: rgba(0,0,0,1);
+background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(54,54,54,1) 35%, rgba(71,71,71,1) 52%, rgba(87,84,87,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,1)), color-stop(35%, rgba(54,54,54,1)), color-stop(52%, rgba(71,71,71,1)), color-stop(100%, rgba(87,84,87,1)));
+background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(54,54,54,1) 35%, rgba(71,71,71,1) 52%, rgba(87,84,87,1) 100%);
+background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(54,54,54,1) 35%, rgba(71,71,71,1) 52%, rgba(87,84,87,1) 100%);
+background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(54,54,54,1) 35%, rgba(71,71,71,1) 52%, rgba(87,84,87,1) 100%);
+background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(54,54,54,1) 35%, rgba(71,71,71,1) 52%, rgba(87,84,87,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#575457', GradientType=1 );
+
+
+}
+.navbar a{
+  color: #000;
+
+}
+#comments{
+  margin-top: 20px;
+}
+.comment{
+  margin-left: 25px;
+  margin-bottom: 2em;
+}
+.comment .author {
+  font-weight: bold;
+}
+.panel-default {
+  background: #efd;
+  opacity: 0.85;
+}
+
+.panel hr {
+  /*margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;*/
+  border-top: 1px solid #aaa;
+}
+h3{
+  text-align: center;
+  padding-top: 0px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.file_upload{
+  text-align: left;
+  padding-bottom: 0px;
+  margin-bottom: 5px;
+
+}
+
+.photo-link{
+  text-align: center;
+}
