@@ -5,20 +5,13 @@ require_once '../includes/initialize.php';
 $page = !empty($_GET['page']) ? (int)$_GET['page'] : 1;
 
 // no. of records to show per page
-$per_page = 2;
+$per_page = 8;
 
 // Total no. of records in the given table
 $total_count = Photograph::count_all();
 
 // create a new pagination object and pass all the 3 vars...
 $pagination = new Pagination($page, $per_page, $total_count);
-
-// This is not pagination as all records are fetched...
-// $photos = Photograph::find_all(); 
-// var_dump($photos);
-// echo "Hello";
-
-// We use pagination instead of find_all();
 
 // Insert Pagination - we fetch only limited records using offset to go to next page
 $sql  = "SELECT * FROM photographs ";
@@ -36,37 +29,21 @@ $photos = Photograph::find_by_sql($sql);
       <div>
       	<?php if ($session->is_logged_in()) { ?>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="admin/index.php">Home</a></li>
-          <li><a href="admin/list_photos.php">List Photos</a></li>
-          <li><a href="admin/photo_upload.php">Upload Photo</a></li>
-          <li><a href="admin/logfile.php">Log File</a></li>
+					<li><a href="admin/index.php">Home</a></li>
+          <li><a href="list_photos.php">Photo Catalog</a></li>
+          <li><a href="photo_upload.php">Upload Photo</a></li>
+          <li><a href="logfile.php">Log File</a></li>
           <li><a href="admin/logout.php">Logout</a></li>
-          <li><a href="#">&nbsp;&nbsp;&nbsp;</a></li>
-        </ul>
+        	<li><a href="#">Logged in as <?php echo $_SESSION['username']; ?></a></li>        </ul>
         <?php } else { ?>
         	<ul class="nav navbar-nav navbar-right">
         		<li><a href="admin/login.php">Login</a></li>
+        		<li><a href="admin/registration.php">Register</a></li>
         	</ul>
         <?php } ?>	 
       </div>
     </div>
   </div>
-
-<!-- 	<h2>Photo Collection</h2>
-	<p><a href="admin/logfile.php">Log File</a></p>
-	<p><a href="admin/photo_upload.php">Upload Photo</a></p>
-	<p><a href="admin/list_photos.php">List Photos</a></p>
-	<p><a href="admin/logout.php">Logout</a></p>
- -->	
-	<?php // print_r(gd_info()); ?>
-  <!-- PHP way -->
-  	<?php // foreach ($photos as $photo) {
-  	// 	echo "";
-  	// 	echo '<a href = "photo.php?id='.$photo->id."\" title=".$photo->filename."><img src = ".$photo->image_path()." width='200'></a>";
-  	// 	echo "&nbsp;&nbsp;";
-  	// } 
-	?>
-
 <!-- html way -->
 	<?php  foreach($photos as $photo): ?>
 		<div class="clearfix grid" style="float: left; margin-left:30px;">
@@ -76,14 +53,12 @@ $photos = Photograph::find_by_sql($sql);
     </span>
 			<img class="photo " id="photo" src="<?php echo $photo->image_path(); ?>" alt="<?php echo $photo->filename; ?>" width = "200" height="150" title="<?php echo $photo->caption; ?>">
 		</a>
-		<!-- <p style="text-align: center;"><?php echo $photo->caption; ?></p> -->
 		</div>
 
 	<?php  endforeach; ?>
 
 	<hr>
 	
-
 	<!-- // pagination links -->
 	
 	<div class="container margin" id="pagination" style="clear: both;">
@@ -114,4 +89,11 @@ $photos = Photograph::find_by_sql($sql);
 	}
 	?>
  </div>
+
+ <div class="container">
+ 	<hr class="hr-dark"> 
+ 	<p class="text-center">Photo Gallery is a photo blog which allow users to
+ 	upload their  photos.	</p>
+ </div>
+
 <?php include 'layouts/footer.php'; ?>

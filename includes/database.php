@@ -45,7 +45,7 @@ class MySQLiDatabase{
 
 private function confirm_query($result){
 		if (!$result) { //mysqli_query can be subsituted as a method
-			$output  = "Die connection failed. ".mysqli_error($this->dbc)."<br>";
+			$output  = "<br>Die connection failed. ".mysqli_error($this->dbc)."<br>";
 			// only for testing and not production
 			$output .= "Last SQL Query  -  ".$this->last_query; 
 			die($output);

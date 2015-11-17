@@ -12,3 +12,5 @@
 		<h1>Photo Gallery</h1>
 	</div> -->
 	<div class="container" id = "main">
+
+		

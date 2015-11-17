@@ -7,15 +7,15 @@
 
 // Database Constants
 // REURN null means nothing
-// defined('DB_SERVER') ? null : define('DB_SERVER', 'localhost'); 
-// defined('DB_USER') 	 ? null : define('DB_USER', 'gallery'); 
-// defined('DB_PASS')   ? null : define('DB_PASS', 'photo'); 
-// defined('DB_NAME')  or define('DB_NAME', 'photo_gallery'); 
+defined('DB_SERVER') ? null : define('DB_SERVER', 'localhost'); 
+defined('DB_USER') 	 ? null : define('DB_USER', 'gallery'); 
+defined('DB_PASS')   ? null : define('DB_PASS', 'photo'); 
+defined('DB_NAME')  or define('DB_NAME', 'photo_gallery'); 
 
-defined('DB_SERVER') ? null : define('DB_SERVER', 'mysql.hostinger.in'); 
-defined('DB_USER') 	 ? null : define('DB_USER', 'u140634069_admin'); 
-defined('DB_PASS')   ? null : define('DB_PASS', 'photogallery'); 
-defined('DB_NAME')  or define('DB_NAME', 'u140634069_photo'); 
+// defined('DB_SERVER') ? null : define('DB_SERVER', 'mysql.hostinger.in'); 
+// defined('DB_USER') 	 ? null : define('DB_USER', 'u140634069_admin'); 
+// defined('DB_PASS')   ? null : define('DB_PASS', 'photogallery'); 
+// defined('DB_NAME')  or define('DB_NAME', 'u140634069_photo'); 
 
 // Alternate way
 // defined('CONSTANT') or define('CONSTANT', 'SomeDefaultValue');

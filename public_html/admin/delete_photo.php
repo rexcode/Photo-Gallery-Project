@@ -9,11 +9,17 @@ if (empty($_GET['id'])) {
 }
 
 $photo = Photograph::find_by_id($_GET['id']);
-if ($photo && $photo->destroy()) {
-	$_SESSION['message'] = "File $photo->filename was deleted..";
-	redirect_to('list_photos.php');
+if ($_SESSION['username'] == $photo->uploader) {
+	
+	if ($photo && $photo->destroy()) {
+		$_SESSION['message'] = "File $photo->filename was deleted..";
+		redirect_to('list_photos.php');
+	} else {
+		$_SESSION['message'] = "File $photo->filename was not deleted..";
+		redirect_to('list_photos.php');
+	}
 } else {
-	$_SESSION['message'] = "File $photo->filename was not deleted..";
-	redirect_to('list_photos.php');
+	$_SESSION['message'] = "You are not authorised to delete '$photo->filename' as you have not uploaded it.";
+		redirect_to('list_photos.php');
 }
 

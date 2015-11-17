@@ -27,6 +27,7 @@ public function check_login()
 	if (isset($_SESSION['user_id'])) { // cans use session['agent'] for better security...
 		$this->logged_in = true;
 		$this->user_id = $_SESSION['user_id'];
+		$this->username = $_SESSION['username'];
 	} else {
 		unset($this->user_id);
 		$this->logged_in = false;

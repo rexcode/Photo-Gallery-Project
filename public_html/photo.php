@@ -62,17 +62,20 @@ $errors = "";
         <?php if ($session->is_logged_in()) { ?>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="admin/index.php">Home</a></li>
-          <li><a href="admin/list_photos.php">List Photos</a></li>
+          <li><a href="admin/list_photos.php">Photo Catalog</a></li>
           <li><a href="admin/photo_upload.php">Upload Photo</a></li>
           <li><a href="admin/logfile.php">Log File</a></li>
           <li><a href="admin/logout.php">Logout</a></li>
-          <!-- <li><a href="#">&nbsp;&nbsp;</a></li> -->
+          <li><a href="#">Logged in as <?php echo $_SESSION['username']; ?></a></li>
         </ul>
         <?php } else { ?>
-        	<ul class="nav navbar-nav navbar-right">
-        		<li><a href="admin/login.php">Login</a></li>
-        	</ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="admin/login.php">Login</a></li>
+            <li><a href="admin/registration.php">Register</a></li>
+          </ul>
         <?php } ?>
+
+        
       </div>
     </div>
   </div>

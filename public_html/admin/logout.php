@@ -14,17 +14,15 @@ include '../layouts/admin_header.php';
     	<p><a class="navbar-brand text-muted" href="../index.php">Photo Gallery</a></p>      
       <div>
         <ul class="nav navbar-nav navbar-right">
-        	<li><a href="index.php">Home</a></li>
-          <li><a href="list_photos.php">List Photos</a></li>
-          <li><a href="photo_upload.php">Upload Photo</a></li>
-          <li><a href="logfile.php">Log File</a></li>
+        	<li><a href="../index.php">Home</a></li>
           <li><a href="login.php">Login</a></li>
-          <li><a href="#">&nbsp;&nbsp;&nbsp;</a></li>
+          <li><a href="registration.php">Register</a></li>
         </ul>
       </div>
     </div>
   </div>
-	<h1 class="margin center">You are now logged out.</h1>
+  <br><br><br><br>
+	<h2 class="margin center">You are now logged out.</h2><br>
 	<p class="center"><a class="btn btn-info" href="login.php">Login</a></p>
 
 <?php include '../layouts/admin_footer.php'; ?>

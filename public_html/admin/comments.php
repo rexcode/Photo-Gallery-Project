@@ -38,7 +38,7 @@ if (!$photo) {
       <div>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="index.php">Home</a></li>
-          <li><a href="list_photos.php">List Photos</a></li>
+          <li><a href="list_photos.php">Photo Catalog</a></li>
           <li><a href="photo_upload.php">Upload Photo</a></li>
           <li><a href="logfile.php">Log File</a></li>
           <li><a href="logout.php">Logout</a></li>
@@ -60,7 +60,12 @@ if (!$photo) {
           <p><span class=" author"><?php echo htmlspecialchars($comment->author); ?></span> wrote : </p>
           <p><?php echo strip_tags($comment->body, '<stronng><em><p>'); ?></p>
           <p><?php echo datetime_to_text($comment->created); ?></p>
-          <p><a id= "delete_comment" class= "delete_comment btn btn-danger" href="delete_comment.php?comment_id=<?php echo $comment->id; ?>">Delete Comment</a></p>
+          <p>
+            <?php if ($_SESSION['username'] == "admin") { ?>
+            <a id= "delete_comment" class= "delete_comment btn btn-danger" href="delete_comment.php?comment_id=<?php echo $comment->id; ?>">Delete Comment</a></p>
+            <?php } else { ?>
+            <p class= "btn btn-default">Only admin can review comments</p>
+            <?php } ?>
         </div>
         <hr>
     <?php endforeach; ?>

@@ -81,7 +81,7 @@ a { color: #8D0D19;}
   min-height: 620px; 
   width: 100%; 
  /* background: #E4F6F8; */
-  padding: 2em;
+  padding: 1em;
 }
 
 #footer {
@@ -92,7 +92,7 @@ a { color: #8D0D19;}
   background: #1A400C; 
   background: #080A76;
   background: #222;
-  opacity: 0.6;
+  opacity: 0.8;
   color: #D7ECFA; 
 }
 
@@ -165,7 +165,7 @@ nav ul {
   margin: 10px;
 }
 .margin{
-  margin-top: 80px;
+  margin-top: 5px;
 }
 .form p {
   text-align: left;
@@ -211,6 +211,8 @@ nav ul {
   background-color:#ddd;
 }
 .container{
+  /*margin-top: 5px;*/
+  /*padding-top: 5px;*/
   max-width: 1000px;
 }
 
@@ -273,4 +275,7 @@ h3{
 
 .photo-link{
   text-align: center;
+}
+.hr-dark{
+  border-top: 1px solid #aaa; 
 }

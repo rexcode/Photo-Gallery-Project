@@ -30,7 +30,7 @@ if (isset($_GET['clear']) && ($_GET['clear'] == 'true')) { // This works OK..
 	// reset the logfile.
 	file_put_contents($file, "");
 	// Add the first log file enrty
-	log_action("Logs Cleared", "by User ID {$session->user_id}");
+	log_action("Logs Cleared", "by {$session->username}");
 	// redirect the same page, so url won't have
 	// "clear=true" query anymore..
 	redirect_to('logfile.php');
@@ -44,20 +44,24 @@ if (isset($_GET['clear']) && ($_GET['clear'] == 'true')) { // This works OK..
       <div>
         <ul class="nav navbar-nav navbar-right">
         	<li><a href="admin/index.php">Home</a></li>
-          <li><a href="list_photos.php">List Photos</a></li>
+        	<li><a href="list_photos.php">Photo Catalog</a></li>
           <li><a href="photo_upload.php">Upload Photo</a></li>
           <li><a href="logfile.php">Log File</a></li>
           <li><a href="logout.php">Logout</a></li>
-          <li><a href="#">&nbsp;&nbsp;&nbsp;</a></li>
+        	<li><a href="#">Logged in as <?php echo $_SESSION['username']; ?></a></li>
         </ul>
       </div>
     </div>
   </div>
-
+	<br><br><br>	
 	<h2 class="container margin">Log File</h2>
-	<p class="center">Log file displays the record of logins of the admin</p>
+	<p class="center">Log file displays the record of logins of the users and admin</p><br>
 	<p><a class="btn btn-success" href="index.php">&laquo; &nbsp; Back</a>
-	<a class="btn btn-warning"href="logfile.php?clear=true">Clear the log File</a></p>
+	<?php if ($_SESSION['username'] == 'admin'){ ?>
+		<a class=" delete_log_file btn btn-warning"href="logfile.php?clear=true">Clear the log File</a></p>
+	<?php } else { ?>	
+		<span class=" btn btn-default">Only admin can clear this file.</span>
+	<?php } ?>
 
 <?php  
 //$content ="";

@@ -6,7 +6,9 @@
   </div> -->
   <div id="footer">
     &copy; - <?php echo date('Y', time()); ?>
-    <a href="https://github.com/rexcode">Rexcode</a> - Vicky Patel.
+   <!--  <a href="https://github.com/rexcode">Rexcode</a> - Vicky Patel. -->
+    <a href="https://rexcode.github.io" target="_blank" title="Github profile">Rexcode</a>&nbsp;
+    <a href="https://github.com/rexcode/listapp/" target="_blank"><img src="images/github10.png" alt="Github icon" title="Github repository of this project " width="12px" height="12px"></a>
   <br><br>
   </div>
 
